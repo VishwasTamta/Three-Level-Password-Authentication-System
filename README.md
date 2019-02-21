@@ -16,6 +16,7 @@ _For Picture Password there at first user have to select an image in jpg format 
 ![picture](picture.PNG)
 ### Then a folder locking system:
 _This is a simple folder locking system which user can operate just by browsing the folder he/she wants to lock then user can simply click lock to lock the folder or unlock to unlock the folder._
+
 ![folder loc](folder%20loc.PNG)
 ## Advantages of this Application
 - This application provides the aditional security to the windows folders.
