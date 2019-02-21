@@ -5,9 +5,11 @@ _This project is made to implement three levels of passwords for mainly windows 
 
 ### Level 1 Text Password
 _For text password it is a simple text based password to pass the level 1._
+
 ![LoginText](LoginText.PNG)
 ### Level 2 Color Combination
 _For Color Combination password there is basically three colors red green blue(RGB) where user can set different combination of colors by clicking on those colors._
+
 ![color](color.PNG)
 ### Level 3 Picture Password
 _For Picture Password there at first user have to select an image in jpg format to use as an password and then user can set the password by clicking on the image in different places, at the time of login the user have to choose the same picture he have choosen to take as an password and then user have to click at the same places where he/she have clicked at the time of setting the password._
