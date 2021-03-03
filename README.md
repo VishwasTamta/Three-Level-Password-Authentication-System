@@ -24,4 +24,16 @@ _This is a simple folder locking system which user can operate just by browsing 
 - It provides aditional security from the keyloggers because the keylogger can only work in the case of text password but there are two more passwords which are color combination and picture password.
 - It provides security to folders so that without unlocking the folder no one can delete, read, write, move or copy the folder.
 
+## For Debugging or making modifications and contribution 
+- Please download the Visual Studio and then run the visual studio as an administrator.
+ ![MicrosoftVisualStudioCommunity](https://user-images.githubusercontent.com/29708159/109824689-10c4c380-7c5f-11eb-8790-c60ec767b717.PNG)
+- Open the project folder in Visual Studio.
+- Then set the debugger for TLPAS.csproj file.
+ ![setTheDebuggerForTheTLPAS csprojFile](https://user-images.githubusercontent.com/29708159/109825000-64cfa800-7c5f-11eb-8cfc-93a045d0ea82.PNG)
+- Create an sql database connection with the provided data.mdf file locatied in bin/Debug/data.mdf
+- Then open the main.cs file and change the line 53 and set the location of your database and thats it all done.
+ ![3](https://user-images.githubusercontent.com/29708159/109827839-18d23280-7c62-11eb-8313-4e346017859c.PNG)
+-This project is not completely portable yet because everytime if we share it someone else then a new database is needed to be created and some code is to me modified so if anyone finds a solution for that then please contribute to my GitHub repo.
+
+
 ----

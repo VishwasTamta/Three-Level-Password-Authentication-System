@@ -27,7 +27,7 @@ namespace TLPAS
             
             if (chk < 3)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+                SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\D drive\Projects\Three Level Password Authentication Sytem\backup\TLPAS\data.mdf; Integrated Security = True; Connect Timeout = 30");
                 SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From LOGIN where USERNAME='" + textBox1.Text + "' and PASSWORD='" + textBox2.Text + "'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);

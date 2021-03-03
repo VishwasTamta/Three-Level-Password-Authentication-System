@@ -12,11 +12,14 @@ using System.Data.SqlClient;
 
 namespace TLPAS
 {
-    public partial class pictureRst : Form
+    public partial class picChk : Form
     {
-        public pictureRst()
+        public picChk()
         {
-            InitializeComponent();      
+            InitializeComponent();
+
+
+
         }
         SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\D drive\Projects\Three Level Password Authentication Sytem\backup\TLPAS\data.mdf; Integrated Security = True; Connect Timeout = 30");
 
@@ -39,7 +42,7 @@ namespace TLPAS
         private void button1_Click_1(object sender, EventArgs e)
         {
             textBox1.Text += "1";
-            
+
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -55,136 +58,136 @@ namespace TLPAS
                 imgLocation = dialog.FileName;
                 img = Image.FromFile(dialog.FileName);
             }
-            
+
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-                
-                int w = Convert.ToInt32(500), h = Convert.ToInt32(295);
-                img = Resize(img, w, h);
-                //((Button)sender).Enabled = false;
 
-                //For Dividing image into diffrent blocks
-                //    Image img = Image.FromFile("d:\\a.png"); // a.png has 500X295 width and height
-                var newimg = ScaleImage(img, 500, 295);
-                int widthThird = (int)((double)newimg.Width / 10.0 + 0.5);
-                int heightThird = (int)((double)newimg.Height / 10.0 + 0.5);
-                Bitmap[,] bmps = new Bitmap[100, 100];
-                for (int i = 0; i < 88; i++)
-                    for (int j = 0; j < 88; j++)
-                    {
-                        bmps[i, j] = new Bitmap(widthThird, heightThird);
-                        Graphics g = Graphics.FromImage(bmps[i, j]);
-                        g.DrawImage(img, new Rectangle(0, 0, widthThird, heightThird), new Rectangle(j * widthThird, i * heightThird, widthThird, heightThird), GraphicsUnit.Pixel);
-                        g.Dispose();
-                    }
-                button1.BackgroundImage = bmps[0, 0];
-                button2.BackgroundImage = bmps[0, 1];
-                button3.BackgroundImage = bmps[0, 2];
-                button4.BackgroundImage = bmps[0, 3];
-                button5.BackgroundImage = bmps[0, 4];
-                button6.BackgroundImage = bmps[0, 5];
-                button7.BackgroundImage = bmps[0, 6];
-                button8.BackgroundImage = bmps[0, 7];
-                button9.BackgroundImage = bmps[0, 8];
-                button22.BackgroundImage = bmps[1, 0];
-                button21.BackgroundImage = bmps[1, 1];
-                button20.BackgroundImage = bmps[1, 2];
-                button19.BackgroundImage = bmps[1, 3];
-                button18.BackgroundImage = bmps[1, 4];
-                button17.BackgroundImage = bmps[1, 5];
-                button16.BackgroundImage = bmps[1, 6];
-                button15.BackgroundImage = bmps[1, 7];
-                button14.BackgroundImage = bmps[1, 8];
+            int w = Convert.ToInt32(500), h = Convert.ToInt32(295);
+            img = Resize(img, w, h);
+            //((Button)sender).Enabled = false;
 
-                button40.BackgroundImage = bmps[2, 0];
-                button39.BackgroundImage = bmps[2, 1];
-                button38.BackgroundImage = bmps[2, 2];
-                button37.BackgroundImage = bmps[2, 3];
-                button36.BackgroundImage = bmps[2, 4];
-                button35.BackgroundImage = bmps[2, 5];
-                button34.BackgroundImage = bmps[2, 6];
-                button33.BackgroundImage = bmps[2, 7];
-                button32.BackgroundImage = bmps[2, 8];
-                button31.BackgroundImage = bmps[3, 0];
-                button30.BackgroundImage = bmps[3, 1];
-                button29.BackgroundImage = bmps[3, 2];
-                button28.BackgroundImage = bmps[3, 3];
-                button27.BackgroundImage = bmps[3, 4];
-                button26.BackgroundImage = bmps[3, 5];
-                button25.BackgroundImage = bmps[3, 6];
-                button24.BackgroundImage = bmps[3, 7];
-                button23.BackgroundImage = bmps[3, 8];
+            //For Dividing image into diffrent blocks
+            //    Image img = Image.FromFile("d:\\a.png"); // a.png has 500X295 width and height
+            var newimg = ScaleImage(img, 500, 295);
+            int widthThird = (int)((double)newimg.Width / 10.0 + 0.5);
+            int heightThird = (int)((double)newimg.Height / 10.0 + 0.5);
+            Bitmap[,] bmps = new Bitmap[100, 100];
+            for (int i = 0; i < 88; i++)
+                for (int j = 0; j < 88; j++)
+                {
+                    bmps[i, j] = new Bitmap(widthThird, heightThird);
+                    Graphics g = Graphics.FromImage(bmps[i, j]);
+                    g.DrawImage(img, new Rectangle(0, 0, widthThird, heightThird), new Rectangle(j * widthThird, i * heightThird, widthThird, heightThird), GraphicsUnit.Pixel);
+                    g.Dispose();
+                }
+            button1.BackgroundImage = bmps[0, 0];
+            button2.BackgroundImage = bmps[0, 1];
+            button3.BackgroundImage = bmps[0, 2];
+            button4.BackgroundImage = bmps[0, 3];
+            button5.BackgroundImage = bmps[0, 4];
+            button6.BackgroundImage = bmps[0, 5];
+            button7.BackgroundImage = bmps[0, 6];
+            button8.BackgroundImage = bmps[0, 7];
+            button9.BackgroundImage = bmps[0, 8];
+            button22.BackgroundImage = bmps[1, 0];
+            button21.BackgroundImage = bmps[1, 1];
+            button20.BackgroundImage = bmps[1, 2];
+            button19.BackgroundImage = bmps[1, 3];
+            button18.BackgroundImage = bmps[1, 4];
+            button17.BackgroundImage = bmps[1, 5];
+            button16.BackgroundImage = bmps[1, 6];
+            button15.BackgroundImage = bmps[1, 7];
+            button14.BackgroundImage = bmps[1, 8];
 
-                button76.BackgroundImage = bmps[4, 0];
-                button75.BackgroundImage = bmps[4, 1];
-                button74.BackgroundImage = bmps[4, 2];
-                button73.BackgroundImage = bmps[4, 3];
-                button72.BackgroundImage = bmps[4, 4];
-                button71.BackgroundImage = bmps[4, 5];
-                button70.BackgroundImage = bmps[4, 6];
-                button69.BackgroundImage = bmps[4, 7];
-                button68.BackgroundImage = bmps[4, 8];
-                button67.BackgroundImage = bmps[5, 0];
-                button66.BackgroundImage = bmps[5, 1];
-                button65.BackgroundImage = bmps[5, 2];
-                button64.BackgroundImage = bmps[5, 3];
-                button63.BackgroundImage = bmps[5, 4];
-                button62.BackgroundImage = bmps[5, 5];
-                button61.BackgroundImage = bmps[5, 6];
-                button60.BackgroundImage = bmps[5, 7];
-                button59.BackgroundImage = bmps[5, 8];
+            button40.BackgroundImage = bmps[2, 0];
+            button39.BackgroundImage = bmps[2, 1];
+            button38.BackgroundImage = bmps[2, 2];
+            button37.BackgroundImage = bmps[2, 3];
+            button36.BackgroundImage = bmps[2, 4];
+            button35.BackgroundImage = bmps[2, 5];
+            button34.BackgroundImage = bmps[2, 6];
+            button33.BackgroundImage = bmps[2, 7];
+            button32.BackgroundImage = bmps[2, 8];
+            button31.BackgroundImage = bmps[3, 0];
+            button30.BackgroundImage = bmps[3, 1];
+            button29.BackgroundImage = bmps[3, 2];
+            button28.BackgroundImage = bmps[3, 3];
+            button27.BackgroundImage = bmps[3, 4];
+            button26.BackgroundImage = bmps[3, 5];
+            button25.BackgroundImage = bmps[3, 6];
+            button24.BackgroundImage = bmps[3, 7];
+            button23.BackgroundImage = bmps[3, 8];
 
-                button58.BackgroundImage = bmps[6, 0];
-                button57.BackgroundImage = bmps[6, 1];
-                button56.BackgroundImage = bmps[6, 2];
-                button55.BackgroundImage = bmps[6, 3];
-                button54.BackgroundImage = bmps[6, 4];
-                button53.BackgroundImage = bmps[6, 5];
-                button52.BackgroundImage = bmps[6, 6];
-                button51.BackgroundImage = bmps[6, 7];
-                button50.BackgroundImage = bmps[6, 8];
-                button49.BackgroundImage = bmps[7, 0];
-                button48.BackgroundImage = bmps[7, 1];
-                button47.BackgroundImage = bmps[7, 2];
-                button46.BackgroundImage = bmps[7, 3];
-                button45.BackgroundImage = bmps[7, 4];
-                button44.BackgroundImage = bmps[7, 5];
-                button43.BackgroundImage = bmps[7, 6];
-                button42.BackgroundImage = bmps[7, 7];
-                button41.BackgroundImage = bmps[7, 8];
+            button76.BackgroundImage = bmps[4, 0];
+            button75.BackgroundImage = bmps[4, 1];
+            button74.BackgroundImage = bmps[4, 2];
+            button73.BackgroundImage = bmps[4, 3];
+            button72.BackgroundImage = bmps[4, 4];
+            button71.BackgroundImage = bmps[4, 5];
+            button70.BackgroundImage = bmps[4, 6];
+            button69.BackgroundImage = bmps[4, 7];
+            button68.BackgroundImage = bmps[4, 8];
+            button67.BackgroundImage = bmps[5, 0];
+            button66.BackgroundImage = bmps[5, 1];
+            button65.BackgroundImage = bmps[5, 2];
+            button64.BackgroundImage = bmps[5, 3];
+            button63.BackgroundImage = bmps[5, 4];
+            button62.BackgroundImage = bmps[5, 5];
+            button61.BackgroundImage = bmps[5, 6];
+            button60.BackgroundImage = bmps[5, 7];
+            button59.BackgroundImage = bmps[5, 8];
 
-                button85.BackgroundImage = bmps[8, 0];
-                button84.BackgroundImage = bmps[8, 1];
-                button83.BackgroundImage = bmps[8, 2];
-                button82.BackgroundImage = bmps[8, 3];
-                button81.BackgroundImage = bmps[8, 4];
-                button80.BackgroundImage = bmps[8, 5];
-                button79.BackgroundImage = bmps[8, 6];
-                button78.BackgroundImage = bmps[8, 7];
-                button77.BackgroundImage = bmps[8, 8];
+            button58.BackgroundImage = bmps[6, 0];
+            button57.BackgroundImage = bmps[6, 1];
+            button56.BackgroundImage = bmps[6, 2];
+            button55.BackgroundImage = bmps[6, 3];
+            button54.BackgroundImage = bmps[6, 4];
+            button53.BackgroundImage = bmps[6, 5];
+            button52.BackgroundImage = bmps[6, 6];
+            button51.BackgroundImage = bmps[6, 7];
+            button50.BackgroundImage = bmps[6, 8];
+            button49.BackgroundImage = bmps[7, 0];
+            button48.BackgroundImage = bmps[7, 1];
+            button47.BackgroundImage = bmps[7, 2];
+            button46.BackgroundImage = bmps[7, 3];
+            button45.BackgroundImage = bmps[7, 4];
+            button44.BackgroundImage = bmps[7, 5];
+            button43.BackgroundImage = bmps[7, 6];
+            button42.BackgroundImage = bmps[7, 7];
+            button41.BackgroundImage = bmps[7, 8];
 
-                button86.BackgroundImage = bmps[8, 9];
-                button87.BackgroundImage = bmps[7, 9];
-                button88.BackgroundImage = bmps[6, 9];
-                button89.BackgroundImage = bmps[5, 9];
-                button90.BackgroundImage = bmps[4, 9];
-                button91.BackgroundImage = bmps[3, 9];
-                button92.BackgroundImage = bmps[2, 9];
-                button93.BackgroundImage = bmps[1, 9];
-                button94.BackgroundImage = bmps[0, 9];
+            button85.BackgroundImage = bmps[8, 0];
+            button84.BackgroundImage = bmps[8, 1];
+            button83.BackgroundImage = bmps[8, 2];
+            button82.BackgroundImage = bmps[8, 3];
+            button81.BackgroundImage = bmps[8, 4];
+            button80.BackgroundImage = bmps[8, 5];
+            button79.BackgroundImage = bmps[8, 6];
+            button78.BackgroundImage = bmps[8, 7];
+            button77.BackgroundImage = bmps[8, 8];
 
-                button95.BackgroundImage = bmps[9, 0];
-                button96.BackgroundImage = bmps[9, 9];
-                button97.BackgroundImage = bmps[9, 8];
-                button98.BackgroundImage = bmps[9, 7];
-                button99.BackgroundImage = bmps[9, 6];
-                button100.BackgroundImage = bmps[9, 5];
-                button101.BackgroundImage = bmps[9, 4];
-                button102.BackgroundImage = bmps[9, 3];
-                button103.BackgroundImage = bmps[9, 2];
-                button104.BackgroundImage = bmps[9, 1];
+            button86.BackgroundImage = bmps[8, 9];
+            button87.BackgroundImage = bmps[7, 9];
+            button88.BackgroundImage = bmps[6, 9];
+            button89.BackgroundImage = bmps[5, 9];
+            button90.BackgroundImage = bmps[4, 9];
+            button91.BackgroundImage = bmps[3, 9];
+            button92.BackgroundImage = bmps[2, 9];
+            button93.BackgroundImage = bmps[1, 9];
+            button94.BackgroundImage = bmps[0, 9];
+
+            button95.BackgroundImage = bmps[9, 0];
+            button96.BackgroundImage = bmps[9, 9];
+            button97.BackgroundImage = bmps[9, 8];
+            button98.BackgroundImage = bmps[9, 7];
+            button99.BackgroundImage = bmps[9, 6];
+            button100.BackgroundImage = bmps[9, 5];
+            button101.BackgroundImage = bmps[9, 4];
+            button102.BackgroundImage = bmps[9, 3];
+            button103.BackgroundImage = bmps[9, 2];
+            button104.BackgroundImage = bmps[9, 1];
         }
 
         Image Resize(Image image, int w, int h)
@@ -198,8 +201,8 @@ namespace TLPAS
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-           textBox1.Text += "2";
+
+            textBox1.Text += "2";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -239,16 +242,23 @@ namespace TLPAS
 
         private void button13_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update picture set picture='"+textBox1.Text+"'";
-            cmd.ExecuteNonQuery();
-            con.Close();
-            this.Hide();
-            MessageBox.Show("Password Successfully Updated");
-            folder fd = new folder();
-            fd.Show();
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From picture where picture='" + textBox1.Text + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                
+                    this.Hide();
+                    MessageBox.Show("Login Successfull");
+                    folder fld = new folder();
+                    fld.Show();
+                
+            }
+            else
+            {
+                MessageBox.Show("Please Check Your Password");
+
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -628,7 +638,9 @@ namespace TLPAS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox1.Text = "";
+            
+             
+            
         }
 
         private void button43_Click(object sender, EventArgs e)
@@ -708,12 +720,7 @@ namespace TLPAS
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-        
-        }
 
-        private void pictureRst_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            e.Cancel = true;
         }
     }
 }
