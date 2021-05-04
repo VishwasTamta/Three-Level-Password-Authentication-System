@@ -14,8 +14,10 @@ namespace TLPAS
     public partial class ColorChk : Form
     {
         int chk;
-        public ColorChk()
+        SqlConnection con;// = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vishwas\Documents\Mydb.mdf; Integrated Security = True; Connect Timeout = 30");
+        public ColorChk(SqlConnection con)
         {
+            this.con = con;
             InitializeComponent();
         }
 
@@ -39,7 +41,6 @@ namespace TLPAS
             
             if (chk < 3)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
                 SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From COLOR where val='" + textBox1.Text + "'", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
@@ -47,7 +48,7 @@ namespace TLPAS
                 {
                     this.Hide();
                     MessageBox.Show("Login Successfull");
-                    picChk pchk = new picChk();
+                    picChk pchk = new picChk(con);
                     pchk.Show();
                 }
                 else
@@ -60,7 +61,7 @@ namespace TLPAS
             {
                 MessageBox.Show("Sorry you have entered wrong password three times");
                 this.Hide();
-                TextChk tc = new TextChk();
+                TextChk tc = new TextChk(con);
                 tc.Show();
                 chk = 0;
             }

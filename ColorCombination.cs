@@ -12,10 +12,11 @@ namespace TLPAS
 {
     public partial class ColorCombination : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+        SqlConnection con;// = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vishwas\Documents\Mydb.mdf; Integrated Security = True; Connect Timeout = 30");
 
-        public ColorCombination()
+        public ColorCombination(SqlConnection con)
         {
+            this.con = con;
             InitializeComponent();                     
         }
 
@@ -45,7 +46,7 @@ namespace TLPAS
             con.Close();
             this.Hide();
             MessageBox.Show("Record Inserted Successfully");
-            picture pic = new picture();
+            picture pic = new picture(con);
             pic.Show();
         }
        
@@ -64,6 +65,11 @@ namespace TLPAS
         private void ColorCombination_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void ColorCombination_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

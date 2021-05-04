@@ -11,9 +11,10 @@ namespace TLPAS
 {
     public partial class Text1 : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
-        public Text1()
+        SqlConnection con; //= new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vishwas\Documents\Mydb.mdf; Integrated Security = True; Connect Timeout = 30");
+        public Text1(SqlConnection con)
         {
+            this.con = con;
             InitializeComponent();
         }
 
@@ -32,9 +33,10 @@ namespace TLPAS
             con.Close();
             this.Hide();
             MessageBox.Show("Password Set");
-            ColorCombination clr = new ColorCombination();
+            ColorCombination clr = new ColorCombination(con);
             clr.Show();
             AcceptButton = button2;
+            con.Close();
             
         }
 

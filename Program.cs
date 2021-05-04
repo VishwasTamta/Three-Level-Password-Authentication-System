@@ -18,24 +18,24 @@ namespace TLPAS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            
-          SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
-           /* con.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM [LOGIN]";
-            cmd.Connection = con;
-            SqlDataReader rd = cmd.ExecuteReader();
-            if (rd.HasRows)
-            {
 
-                Application.Run(new TextChk());
-            }
-            else
-            {
-                Application.Run(new main());
-           }*/
-          Application.Run(new main());
+
+            SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vishwas\Documents\Mydb.mdf; Integrated Security = True; Connect Timeout = 30");
+            /* con.Open();
+             SqlCommand cmd = new SqlCommand();
+             cmd.CommandText = "SELECT * FROM [LOGIN]";
+             cmd.Connection = con;
+             SqlDataReader rd = cmd.ExecuteReader();
+             if (rd.HasRows)
+             {
+
+                 Application.Run(new TextChk());
+             }
+             else
+             {
+                 Application.Run(new main());
+            }*/
+            Application.Run(new main());
           
         }
     }

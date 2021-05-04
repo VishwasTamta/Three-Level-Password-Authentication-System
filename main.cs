@@ -48,9 +48,10 @@ namespace TLPAS
 
 }*/
 
+        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vishwas\Documents\Mydb.mdf; Integrated Security = True; Connect Timeout = 30");
+        
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
             con.Open();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "SELECT * FROM [LOGIN]";
@@ -69,17 +70,17 @@ namespace TLPAS
             key.SetValue("", Application.ExecutablePath);
            
                     this.Hide();
-                    Text1 t1 = new Text1();
+                    Text1 t1 = new Text1(con);
                     t1.Show();
                     
                 }
-      
+            con.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TextChk tc = new TextChk();
+            TextChk tc = new TextChk(con);
             tc.Show();
         }
 
