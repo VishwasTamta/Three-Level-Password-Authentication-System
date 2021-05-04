@@ -11,7 +11,7 @@ namespace TLPAS
 {
     public partial class Text1Rst : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\D drive\Projects\Three Level Password Authentication Sytem\backup\TLPAS\data.mdf; Integrated Security = True; Connect Timeout = 30");
+        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
         public Text1Rst()
         {
             InitializeComponent();

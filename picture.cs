@@ -18,7 +18,7 @@ namespace TLPAS
         {
             InitializeComponent();      
         }
-        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = F:\D drive\Projects\Three Level Password Authentication Sytem\backup\TLPAS\data.mdf; Integrated Security = True; Connect Timeout = 30");
+        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Vishwas\Documents\TLPAS\data.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
 
         Image img;
         public static Image ScaleImage(Image image, int maxWidth, int maxHeight)
