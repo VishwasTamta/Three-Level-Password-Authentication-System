@@ -24,4 +24,16 @@ _This is a simple folder locking system which user can operate just by browsing 
 - It provides aditional security from the keyloggers because the keylogger can only work in the case of text password but there are two more passwords which are color combination and picture password.
 - It provides security to folders so that without unlocking the folder no one can delete, read, write, move or copy the folder.
 
+## To run this project for further development:
+- Download and install Visual Studio (community/any).
+- Open the Visual Studio with the admin privillage for FolderLock feature to run successfully.
+- Create your own local Sql database with three tables:- 
+- Remember to keep names of tables as they are here!
+- LOGIN: USERNAME:varchar(50) PASSWORD:varchar(50) --no primary key
+- COLOR: val:varchar(MAX) --no primary key
+- picture: picture:int --no primary key
+- After that you need to copy the 'connection string' of the database you created.
+- Go to the main.cs file and paste the connection string you just copied in the format showen bellow:-
+- SqlConnection = new SqlConnection(@"Your Connection String");
+- Thats it now save all files and now you can run the project.
 ----
