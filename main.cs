@@ -31,24 +31,24 @@ namespace TLPAS
             int count = 30;*/
         }
 
-       /*
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-        if(count!=0)
-        {
-        button1.Enabled=false;
-        label1.Text =  count.ToString() +" seconds more to Enable Refresh Button";
-        count--;
-        }
-        else
-        {
-        button1.Enabled=true;
-        timer1.Stop();
-        }
+        /*
+         private void timer1_Tick(object sender, EventArgs e)
+         {
+         if(count!=0)
+         {
+         button1.Enabled=false;
+         label1.Text =  count.ToString() +" seconds more to Enable Refresh Button";
+         count--;
+         }
+         else
+         {
+         button1.Enabled=true;
+         timer1.Stop();
+         }
 
-}*/
-
-        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Vishwas\Documents\Mydb.mdf; Integrated Security = True; Connect Timeout = 30");
+ }*/
+        
+        SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Vishwas\Documents\myDatabaseMain.mdf;Integrated Security = True; Connect Timeout = 30");
         
         private void button2_Click(object sender, EventArgs e)
         {

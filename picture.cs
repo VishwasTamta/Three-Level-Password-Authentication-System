@@ -525,7 +525,7 @@ namespace TLPAS
 
         private void button55_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "d";
+            textBox1.Text += "1";
         }
 
         private void button64_Click(object sender, EventArgs e)
@@ -560,72 +560,72 @@ namespace TLPAS
 
         private void button58_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "a";
+            textBox1.Text += "2";
         }
 
         private void button57_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "b";
+            textBox1.Text += "3";
         }
 
         private void button56_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "c";
+            textBox1.Text += "4";
         }
 
         private void button54_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "e";
+            textBox1.Text += "5";
         }
 
         private void button53_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "f";
+            textBox1.Text += "6";
         }
 
         private void button52_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "g";
+            textBox1.Text += "7";
         }
 
         private void button51_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "h";
+            textBox1.Text += "8";
         }
 
         private void button50_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "i";
+            textBox1.Text += "9";
         }
 
         private void button88_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "j";
+            textBox1.Text += "10";
         }
 
         private void button49_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "k";
+            textBox1.Text += "1";
         }
 
         private void button48_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "l";
+            textBox1.Text += "2";
         }
 
         private void button47_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "m";
+            textBox1.Text += "3";
         }
 
         private void button46_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "n";
+            textBox1.Text += "4";
         }
 
         private void button44_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "o";
+            textBox1.Text += "5";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -635,77 +635,77 @@ namespace TLPAS
 
         private void button43_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "q";
+            textBox1.Text += "6";
         }
 
         private void button42_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "r";
+            textBox1.Text += "7";
         }
 
         private void button41_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "s";
+            textBox1.Text += "8";
         }
 
         private void button87_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "t";
+            textBox1.Text += "9";
         }
 
         private void button85_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "u";
+            textBox1.Text += "10";
         }
 
         private void button84_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "v";
+            textBox1.Text += "1";
         }
 
         private void button83_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "w";
+            textBox1.Text += "2";
         }
 
         private void button82_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "x";
+            textBox1.Text += "3";
         }
 
         private void button81_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "y";
+            textBox1.Text += "4";
         }
 
         private void button80_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "z";
+            textBox1.Text += "5";
         }
 
         private void button79_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "A";
+            textBox1.Text += "6";
         }
 
         private void button78_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "B";
+            textBox1.Text += "7";
         }
 
         private void button77_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "C";
+            textBox1.Text += "8";
         }
 
         private void button86_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "D";
+            textBox1.Text += "9";
         }
 
         private void button45_Click(object sender, EventArgs e)
         {
-            textBox1.Text += "P";
+            textBox1.Text += "10";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
